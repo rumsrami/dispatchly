@@ -1,8 +1,11 @@
 FROM node:alpine as build_base
 WORKDIR '/app'
 COPY package.json yarn.lock ./
+ENV NODE_ENV production
 RUN yarn --frozen-lockfile
 COPY . .
+ENV REACT_APP_RPC_HOST http://localhost:9000
+ENV REACT_APP_SSE_HOST http://localhost:9000
 RUN yarn build
 
 FROM nginx

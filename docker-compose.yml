@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3'
 services:
   dispatch:
     container_name: dispatch
@@ -15,10 +15,8 @@ services:
     build:
       context: ./react-client
       dockerfile: Dockerfile.client
-    environment:
-      - NODE_ENV=dev
-      - REACT_APP_RPC_HOST=dispatch
-      - REACT_APP_SSE_HOST=dispatch
+    depends_on:
+      - "dispatch"
     ports:
       - 8080:80
     restart: always
