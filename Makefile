@@ -114,7 +114,7 @@ release:
 ## Compose
 ##
 compose-up:
-	docker-compose -up --build
+	docker-compose up --build
 
 compose-down:
 	docker-compose down

@@ -20,12 +20,13 @@ cd dispatchly
 
 1. Install docker-cli and docker-compose
 2. From the root folder run the client and the server
-``` make compose ```
+``` make compose-up ```
 3. Access the app using the browser
 ``` http://localhost:8080 ```
 - > This builds the client and runs it on Nginx 
 - > The server will run and listen to requests
 - > Maps ports 8080:80 (client) 9000:9000 (server)
+- > `make compose-down` to teardown the created containers and network
 
 #### Local environment without docker (dev environment)
 #### Server
