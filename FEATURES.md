@@ -15,3 +15,10 @@ Key components of the Backend api
 - Requests that deal with the state (create, update, delete and read tasks) are added to a queue.
 - The memory store takes the requests one by one with a buffer to handle load.
 - Actor like pattern is used to make the memory structure thread safe without the use of lock or mutexes.
+
+Limitations
+---
+1. Did not have time to implement the CSV report generator
+2. Time pickers don't work as expected on safari (chrome, firefox, brave work well)
+3. No backend time conflicts validation for time, depend only on the front end
+4. If an error occurs on the backend it sends 500 instead of a customized error response
