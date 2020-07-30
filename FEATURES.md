@@ -14,7 +14,7 @@ Key components of the Backend api
 - Message distribution from the api to clients is multiplexed by Nats internally.
 - Requests that deal with the state (create, update, delete and read tasks) are added to a queue.
 - The memory store takes the requests one by one with a buffer to handle load.
-- Actor like pattern is used to make the memory structure thread safe without the use of lock or mutexes.
+- (Elixir/Erlang) Actor like pattern is used to make the memory structure thread safe without the use of locks and mutexes.
 
 Limitations
 ---

@@ -12,7 +12,7 @@ Running the app locally
 ---
 Clone the repo and navigate to the root folder
 ```
-git clone git@github.com:rumsrami/dispatchly.git`
+git clone git@github.com:rumsrami/dispatchly.git
 cd dispatchly
 ```
 
@@ -23,9 +23,9 @@ cd dispatchly
 ``` make compose ```
 3. Access the app using the browser
 ``` http://localhost:8080 ```
-> This builds the client and runs it on Nginx 
-> The server will run and listen to requests
-> maps port 8080:80 (client) 9000:9000 (server)
+- > This builds the client and runs it on Nginx 
+- > The server will run and listen to requests
+- > Maps ports 8080:80 (client) 9000:9000 (server)
 
 #### Local environment without docker (dev environment)
 #### Server
@@ -37,7 +37,7 @@ cd dispatchly
 ```
 > Server will run on port 9000
 #### Client
-- In a separate terminal window
+In a separate terminal window
 1. Navigate to root folder `cd dispatchly`
 2. Then the client folder `cd react-client`
 3. Run `yarn`
