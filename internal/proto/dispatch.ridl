@@ -1,0 +1,80 @@
+webrpc = v1
+
+name = dispatch
+version = 0.0.1
+
+#-----------------------------
+#
+# Admin
+#
+# Admin Login
+message Admin
+  - email: string
+  - password: string
+
+#
+# System Health Messages
+#
+message Version
+  - webrpcVersion: string
+  - schemaVersion: string
+  - schemaHash: string
+  - appVersion: string
+
+#-----------------------------
+#
+# Task Scheduler messages
+#
+message GetScheduleRequest
+  - driverName: string
+  - week: int
+
+message GetScheduleResponse
+  - schedule: map<int,[]Slot>
+
+message Slot
+  - startHour: string
+  - taskSlot: []string
+
+message CreateTaskRequest
+  - driverName: string
+  - operation: string
+  - week: int
+  - day: int
+  - duration: int
+  - startHour: string
+  - endHour: string
+
+message DeleteTaskRequest
+  - driverName: string
+  - week: int
+  - day: int
+  - startHour: string
+
+message UpdateTaskRequest
+  - driverName: string
+  - week: int
+  - day: int
+  - startHour: []string
+  - newStartHour: string
+  - newEndHour: string
+  - newDuration: int
+  - newOperation: string
+#-----------------------------
+#-----------------------------
+service Dispatch
+
+#
+# Admin
+#
+## READ
+- Ping() => (status: bool)
+- Version() => (version: Version)
+#-----------------------------
+#
+# Task Scheduler actions
+#
+- ReadSchedule(req: GetScheduleRequest) => (res: GetScheduleResponse)
+- CreateTask(req: CreateTaskRequest) => (res: bool)
+- DeleteTask(req: DeleteTaskRequest) => (res: bool)
+- UpdateTask(req: UpdateTaskRequest) => (res: bool)

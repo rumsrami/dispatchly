@@ -1,0 +1,17 @@
+*.tmp
+.DS_Store
+bin
+
+# IDE
+.idea
+
+# react
+react-client/node_modules
+react-client/build
+react-client/.pnp
+react-client/.netlify
+react-client/.pnp.js
+react-client/coverage
+react-client/npm-debug.log*
+react-client/yarn-debug.log*
+react-client/yarn-error.log*
