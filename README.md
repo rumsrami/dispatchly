@@ -1,4 +1,4 @@
-DISPATCHLY - RoseRocket Coding Challenge
+DISPATCHLY
 =================
 
 
