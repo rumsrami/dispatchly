@@ -4,10 +4,6 @@ DISPATCHLY
 
 Dispatchly is a tool for dispatchers to manage tasks for different drivers. A Task is a distinct job per driver that has a start date, end date and an operation. Dispatchly provides a unique and convenient way for you to efficiently manage your resources.
 
-Running the deployed version
----
--	**Website:** https://rr-dispatcher.netlify.app
-
 Running the app locally
 ---
 Clone the repo and navigate to the root folder
